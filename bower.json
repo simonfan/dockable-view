@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Some module...",
   "dependencies": {
-    "model-dock": "*",
+    "model-dock": "0.1.1",
     "lowercase-backbone": "*",
     "collection-dock": "*"
   },
@@ -16,6 +16,8 @@
     "qunit": "*"
   },
   "resolutions": {
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "model-dock": "0.1.1",
+    "jquery.filler": "0.2.1"
   }
 }

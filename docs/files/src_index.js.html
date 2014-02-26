@@ -123,6 +123,10 @@ define(function (require, exports, module) {
 
 		}, this));
 
+
+
+
+
 		// replace dock definition with effective dock objects.
 		this.docks = docks;
 	});
@@ -157,6 +161,7 @@ define(function (require, exports, module) {
 		 *     @param [model] {backbone.model Object}
 		 */
 		dock: function buildDock(options) {
+
 			// set $el
 			options.$el = this.$el;
 
