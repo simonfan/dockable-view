@@ -12,7 +12,6 @@ define(function (require, exports, module) {
 		modelDock = require('model-dock'),
 		collectionDock = require('collection-dock');
 
-
 	/**
 	 * The view builder. It is basically a Backbone.View
 	 * constructor that supports declarative 'docks'.
@@ -32,10 +31,6 @@ define(function (require, exports, module) {
 			return this.dock(doptions);
 
 		}, this));
-
-
-
-
 
 		// replace dock definition with effective dock objects.
 		this.docks = docks;

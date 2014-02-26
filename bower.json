@@ -1,12 +1,13 @@
 {
   "name": "dockable-view",
   "main": "built/dockable-view.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Some module...",
   "dependencies": {
     "model-dock": "0.1.1",
     "lowercase-backbone": "*",
-    "collection-dock": "*"
+    "collection-dock": "*",
+    "subject": "0.4.1"
   },
   "devDependencies": {
     "requirejs": "*",
@@ -17,7 +18,6 @@
   },
   "resolutions": {
     "jquery": "~2.1.0",
-    "model-dock": "0.1.1",
-    "jquery.filler": "0.2.1"
+    "subject": "0.4.1"
   }
 }
