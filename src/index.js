@@ -33,10 +33,6 @@ define(function (require, exports, module) {
 
 		}, this));
 
-
-
-
-
 		// replace dock definition with effective dock objects.
 		this.docks = docks;
 	});
