@@ -1,0 +1,123 @@
+{
+    "project": {
+        "name": "dockable-view",
+        "version": "0.0.0"
+    },
+    "files": {
+        "src/index.js": {
+            "name": "src/index.js",
+            "modules": {
+                "dockable-view": 1
+            },
+            "classes": {
+                "view": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "dockable-view": {
+            "name": "dockable-view",
+            "submodules": {},
+            "classes": {
+                "view": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/index.js",
+            "line": 16
+        }
+    },
+    "classes": {
+        "view": {
+            "name": "view",
+            "shortname": "view",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "dockable-view",
+            "namespace": "",
+            "file": "src/index.js",
+            "line": 16,
+            "description": "The view builder. It is basically a Backbone.View\nconstructor that supports declarative 'docks'.",
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                }
+            ]
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/index.js",
+            "line": 43,
+            "description": "The builder function for model docks.",
+            "itemtype": "property",
+            "name": "modelDock",
+            "type": "Function",
+            "class": "view",
+            "module": "dockable-view"
+        },
+        {
+            "file": "src/index.js",
+            "line": 51,
+            "description": "The builder function for collection docks.",
+            "itemtype": "property",
+            "name": "collectionDock",
+            "type": "Function",
+            "class": "view",
+            "module": "dockable-view"
+        },
+        {
+            "file": "src/index.js",
+            "line": 59,
+            "itemtype": "method",
+            "name": "dock",
+            "params": [
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "type",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "name",
+                    "description": "",
+                    "type": "String"
+                },
+                {
+                    "name": "$container",
+                    "description": "",
+                    "type": "Object|String",
+                    "optional": true
+                },
+                {
+                    "name": "map",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                },
+                {
+                    "name": "model",
+                    "description": "",
+                    "type": "backbone.model Object",
+                    "optional": true
+                }
+            ],
+            "class": "view",
+            "module": "dockable-view"
+        }
+    ],
+    "warnings": []
+}
