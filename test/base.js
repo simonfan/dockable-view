@@ -55,6 +55,7 @@
 					},
 					colors: {
 						name: 'colors',
+						property: false,
 						type: 'model-dock',
 						map: {
 							'highlight': '.highlight -> css:background-color',
@@ -72,7 +73,8 @@
 			// named docks
 			v.data.should.be.type('object');
 			v.position.should.be.type('object');
-			v.colors.should.be.type('object');
+			// dock set not to have a property
+			should(v.colors).be.type('undefined');
 
 			// build a model
 			var banana = backbone.model({
