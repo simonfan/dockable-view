@@ -77,7 +77,7 @@ define(function (require, exports, module) {
 			type = /-dock$/.test(type) ? type : type + '-dock';
 
 			// build
-			return this[type](options);
+			return this.docks[options.name] = this[type](options);
 		},
 	});
 });
