@@ -25,15 +25,18 @@ define(function (require, exports, module) {
 		// parent constructor.
 		backbone.view.prototype.initialize.apply(this, arguments);
 
-		// build dock objects.
-		var docks = _.mapValues(this.docks, _.bind(function (doptions, dname) {
+		// get dock definitions
+		var definitions = this.docks;
 
-			return this.dock(doptions);
+		// reset docks to empty object
+		this.docks = {};
+
+		// build dock objects.
+		_.each(definitions, _.bind(function (doptions, dname) {
+
+			return this.dock(dname, doptions);
 
 		}, this));
-
-		// replace dock definition with effective dock objects.
-		this.docks = docks;
 	});
 
 	// proto methods and properties.
@@ -61,6 +64,7 @@ define(function (require, exports, module) {
 		 * @param options {Object}
 		 *     @param type {String}
 		 *     @param name {String}
+		 *     @param [property] {String|Boolean}
 		 *     @param [$container] {Object|String}
 		 *     @param [map] {Object}
 		 *     @param [model] {backbone.model Object}
@@ -88,8 +92,15 @@ define(function (require, exports, module) {
 			// build
 			var dock = this[type](options);
 
-			if (name) {
-				this[name] = dock;
+			// set on docks
+			this.docks[name] = dock;
+
+			// set as property
+			// DO NOT SET IF PROPERTY IS SET TO FALSE.
+			if (options.property !== false) {
+				var property = options.property || options.name;
+
+				this[property] = dock;
 			}
 
 			// return

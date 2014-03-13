@@ -57,7 +57,7 @@
     "classitems": [
         {
             "file": "src/index.js",
-            "line": 42,
+            "line": 45,
             "description": "The builder function for model docks.",
             "itemtype": "property",
             "name": "modelDock",
@@ -67,7 +67,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 50,
+            "line": 53,
             "description": "The builder function for collection docks.",
             "itemtype": "property",
             "name": "collectionDock",
@@ -77,7 +77,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 58,
+            "line": 61,
             "itemtype": "method",
             "name": "dock",
             "params": [
@@ -95,6 +95,12 @@
                     "name": "name",
                     "description": "",
                     "type": "String"
+                },
+                {
+                    "name": "property",
+                    "description": "",
+                    "type": "String|Boolean",
+                    "optional": true
                 },
                 {
                     "name": "$container",
