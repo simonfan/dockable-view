@@ -1,23 +1,23 @@
 {
   "name": "dockable-view",
   "main": "built/dockable-view.js",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Some module...",
   "dependencies": {
-    "model-dock": "0.1.1",
-    "lowercase-backbone": "*",
-    "collection-dock": "*",
-    "subject": "0.4.1"
+	"model-dock": "0.1.1",
+	"lowercase-backbone": "*",
+	"collection-dock": "*",
+	"subject": "0.4.1"
   },
   "devDependencies": {
-    "requirejs": "*",
-    "requirejs-text": "*",
-    "underscore": "*",
-    "jquery": "*",
-    "qunit": "*"
+	"requirejs": "*",
+	"requirejs-text": "*",
+	"underscore": "*",
+	"jquery": "*",
+	"qunit": "*"
   },
   "resolutions": {
-    "jquery": "~2.1.0",
-    "subject": "0.4.1"
+	"jquery": "~2.1.0",
+	"subject": "0.4.1"
   }
 }

@@ -36,6 +36,7 @@
 
 				docks: {
 					data: {
+						name: 'data',
 					//	type: 'model-dock',
 						map: {
 							name: '[data-attribute="name"]',
@@ -45,6 +46,7 @@
 					},
 
 					position: {
+						name: 'position',
 						type: 'model-dock',
 						map: {
 							'top': '-> css:top',
@@ -52,6 +54,7 @@
 						}
 					},
 					colors: {
+						name: 'colors',
 						type: 'model-dock',
 						map: {
 							'highlight': '.highlight -> css:background-color',
@@ -65,6 +68,11 @@
 			var v = someview({
 				el: this.$fixture.find('#item')
 			});
+
+			// named docks
+			v.data.should.be.type('object');
+			v.position.should.be.type('object');
+			v.colors.should.be.type('object');
 
 			// build a model
 			var banana = backbone.model({

@@ -65,7 +65,16 @@ define(function (require, exports, module) {
 		 *     @param [map] {Object}
 		 *     @param [model] {backbone.model Object}
 		 */
-		dock: function buildDock(options) {
+		dock: function buildDock(first, second) {
+			var options, name;
+
+			if (_.isObject(first)) {
+				options = first;
+				name = options.name;
+			} else {
+				options = second || {};
+				name = first;
+			}
 
 			// set $el
 			options.$el = this.$el;
@@ -73,11 +82,18 @@ define(function (require, exports, module) {
 			// default dock type is model.
 			var type = options.type || 'model-dock';
 
-			// enable '-dock' omission
+			// enable '-dock' suffix omission
 			type = /-dock$/.test(type) ? type : type + '-dock';
 
 			// build
-			return this.docks[options.name] = this[type](options);
+			var dock = this[type](options);
+
+			if (name) {
+				this[name] = dock;
+			}
+
+			// return
+			return dock;
 		},
 	});
 });

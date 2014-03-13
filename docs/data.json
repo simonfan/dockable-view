@@ -27,7 +27,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/index.js",
-            "line": 16
+            "line": 15
         }
     },
     "classes": {
@@ -42,7 +42,7 @@
             "module": "dockable-view",
             "namespace": "",
             "file": "src/index.js",
-            "line": 16,
+            "line": 15,
             "description": "The view builder. It is basically a Backbone.View\nconstructor that supports declarative 'docks'.",
             "is_constructor": 1,
             "params": [
@@ -57,7 +57,7 @@
     "classitems": [
         {
             "file": "src/index.js",
-            "line": 43,
+            "line": 42,
             "description": "The builder function for model docks.",
             "itemtype": "property",
             "name": "modelDock",
@@ -67,7 +67,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 51,
+            "line": 50,
             "description": "The builder function for collection docks.",
             "itemtype": "property",
             "name": "collectionDock",
@@ -77,7 +77,7 @@
         },
         {
             "file": "src/index.js",
-            "line": 59,
+            "line": 58,
             "itemtype": "method",
             "name": "dock",
             "params": [
