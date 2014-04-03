@@ -12,37 +12,38 @@ define(function (require, exports, module) {
 		modelDock = require('model-dock'),
 		collectionDock = require('collection-dock');
 
-	/**
-	 * The view builder. It is basically a Backbone.View
-	 * constructor that supports declarative 'docks'.
-	 *
-	 * @class view
-	 * @constructor
-	 * @param options {Object}
-	 */
-	var dockable = module.exports = backbone.view.extend(function dockableView(options) {
 
-		// parent constructor.
-		backbone.view.prototype.initialize.apply(this, arguments);
+	var dockable = module.exports = backbone.view.extend({
 
-		// get dock definitions
-		var definitions = this.docks;
+		initialize: function initialize(options) {
+			this.initializeBackboneView(options);
+			this.initializeDockableView(options);
+		},
 
-		// reset docks to empty object
-		this.docks = {};
+		/**
+		 * The view builder. It is basically a Backbone.View
+		 * constructor that supports declarative 'docks'.
+		 *
+		 * @class view
+		 * @constructor
+		 * @param options {Object}
+		 */
+		initializeDockableView: function initializeDockableView(options) {
+			// get dock definitions
+			var definitions = this.docks;
 
-		// build dock objects.
-		_.each(definitions, _.bind(function (doptions, dname) {
+			// reset docks to empty object
+			this.docks = {};
 
-			dname = doptions.name || dname;
+			// build dock objects.
+			_.each(definitions, _.bind(function (doptions, dname) {
 
-			return this.dock(dname, doptions);
+				dname = doptions.name || dname;
 
-		}, this));
-	});
+				return this.dock(dname, doptions);
 
-	// proto methods and properties.
-	dockable.proto({
+			}, this));
+		},
 
 		/**
 		 * The builder function for model docks.
